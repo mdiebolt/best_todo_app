@@ -1,4 +1,9 @@
-- content_for :head
-  %title The Middleman!
+- content_for :head do
+  %title Todos
 
-%h1 The Middleman is watching.
+#todo_app
+
+:coffeescript
+  todoApp = new STRd6.Views.Todos.List
+
+  $('#todo_app').append todoApp.render().el
